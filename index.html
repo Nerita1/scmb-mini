@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>SCMB Mini</title>
+  <meta charset="UTF-8">
+  <title>Login SCMB</title>
 </head>
 <body>
 
-<h1>SCMB Mini</h1>
-<p>Website pertama saya</p>
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Email"><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="signup()">Daftar</button>
+<button onclick="login()">Login</button>
+
+<!-- 1️⃣ LOAD LIBRARY SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- 2️⃣ LOAD FILE JS KITA -->
+<script src="js/auth.js"></script>
 
 </body>
 </html>
