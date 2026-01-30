@@ -39,7 +39,16 @@ async function login() {
 
   if (error) {
     alert("Login gagal: " + error.message);
-  } else {
-    window.location.href = "dashboard.html";
+    return;
   }
+
+  // cek email sudah diverifikasi
+  if (!data.user.email_confirmed_at) {
+    alert("Silakan verifikasi email terlebih dahulu");
+    await sb.auth.signOut();
+    return;
+  }
+
+  // kalau sudah verified
+  window.location.href = "dashboard.html";
 }
