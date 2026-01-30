@@ -1,14 +1,9 @@
-// ================================
-// KONEKSI KE SUPABASE
-// ================================
 const supabase = supabaseJs.createClient(
   "https://vckarhellnkghsnnfmgn.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZja2FyaGVsbG5rZ2hzbm5mbWduIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk3ODA2NDAsImV4cCI6MjA4NTM1NjY0MH0.4D_Xb22o4n5JzR2twZzZUaV1yj5P0seTXMeZXNQyu1s"
 );
 
-// ================================
-// SIGN UP (DAFTAR)
-// ================================
+
 async function signup() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
@@ -25,9 +20,6 @@ async function signup() {
   }
 }
 
-// ================================
-// LOGIN
-// ================================
 async function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
